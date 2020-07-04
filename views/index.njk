@@ -1,53 +1,36 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="utf-8">
-  <title>Foodfy</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="description" content="Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro">
-  <meta name="keywords" content="Receitas, chef, comidas">
-  <meta content="Camilla Correia" name="creator">
+{% extends "layout.njk" %}
 
-  <!-- Favicons -->
-  <link href="../public/assets/favicon.ico" rel="icon">
-
-  <!-- Bootstrap CSS File -->
-  <link href="../public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- CSS File -->
-  <link href="../public/style.css" rel="stylesheet">
-
-</head>
-
-<body>
-
-    <!--==========================
-    Header
-    ============================-->
-    <header>
-      <div class="header-content">
-        <a href="index.html">
-          <img src="../public/assets/logo.png" alt="Foodfy">
-        </a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">Sobre</a>
-            <a href="recipes.html">Receitas</a>
-        </nav>
-      </div>
-      
-    </header><!-- #header -->
+{% block content %}
 
     <main>
 
-        <div class="main-content">
+        <div class="container main-content">
+            <div class="row justify-content-md-center banner">
+                <div class="banner-text col-lg-4-md-12-sm-12 mx-auto">
+                    <h1>As melhores receitas</h1>
+                    <p>Aprenda a contruir os melhores pratos 
+                        com receitas criadas por profissionais 
+                        do mundo inteiro.
+                    </p>
+                </div>
+
+                <div class="banner-img col-lg-4-md-12-sm-12 mx-auto">
+                  <img src="/assets/chef.png">
+                </div>
+
+            </div>
+
             <div class="row justify-content-md-center recipes-container">
+
+                <div class="col-lg-12">
+                    <h2>Mais acessadas</h2>
+                </div>
 
                 <div class="col-lg-4-md-4-sm-12 mx-auto">
                     <ul class="recipes-list">
                         <li>
                             <article class="recipe-card">
-                                <img src="../public/assets/burger.png" alt="Triplo bacon burger">
+                                <img src="/assets/burger.png" alt="Triplo bacon burger">
                                 <h3>Triplo bacon burger</h3>
                                 <p>por Jorge Relato</p>
                             </article>
@@ -59,7 +42,7 @@
                     <ul class="recipes-list">
                         <li>
                             <article class="recipe-card">
-                                <img src="../public/assets/doce.png" alt="Docinhos pão-do-céu">
+                                <img src="/assets/doce.png" alt="Docinhos pão-do-céu">
                                 <h3>Docinhos pão-do-céu</h3>
                                 <p>por Ricardo Golvea</p>
                             </article>
@@ -72,7 +55,7 @@
                     <ul class="recipes-list">
                         <li>
                             <article class="recipe-card">
-                                <img src="../public/assets/espaguete.png" alt="Espaguete ao alho">
+                                <img src="/assets/espaguete.png" alt="Espaguete ao alho">
                                 <h3>Espaguete ao alho</h3>
                                 <p>por Júlia Kinoto</p>
                             </article>
@@ -84,7 +67,7 @@
                     <ul class="recipes-list">
                         <li>
                             <article class="recipe-card">
-                                <img src="../public/assets/asinhas.png" alt="Asinhas de frango ao barbecue">
+                                <img src="/assets/asinhas.png" alt="Asinhas de frango ao barbecue">
                                 <h3>Asinhas de frango ao barbecue</h3>
                                 <p>por Vania Steroski</p>
                             </article>
@@ -96,7 +79,7 @@
                     <ul class="recipes-list">
                         <li>
                             <article class="recipe-card">
-                                <img src="../public/assets/pizza.png" alt="Pizza 4 estações">
+                                <img src="/assets/pizza.png" alt="Pizza 4 estações">
                                 <h3>Pizza 4 estações</h3>
                                 <p>por Fabiana Melo</p>
                             </article>
@@ -108,7 +91,7 @@
                     <ul class="recipes-list">
                         <li>
                             <article class="recipe-card">
-                                <img src="../public/assets/lasanha.png" alt="Lasanha mac n' cheese">
+                                <img src="/assets/lasanha.png" alt="Lasanha mac n' cheese">
                                 <h3>Lasanha mac n' cheese</h3>
                                 <p>por Jualiano Viera</p>
                             </article>
@@ -121,26 +104,4 @@
 
     </main>
 
-    <div class="modal-overlay">
-        <div class="modal-item">
-            <img src="../public/assets/burger.png" alt="">
-            <h2>Asinhas de frango ao barbecue</h2>
-            <p class="modal-recipe-chef">por Vania Steroski</p>
-            <p class="modal-close">Fechar modal</p>
-        </div>
-    </div>
-
-    <!--==========================
-    Footer
-    ============================-->
-    <footer>
-
-        <p>Todos os direitos reservados Foodfy</p>
-
-    </footer>
-
-  <!--  Javascript File -->
-  <script src="../public/scripts.js"></script>
-
-</body>
-</html>
+{% endblock content %} 
