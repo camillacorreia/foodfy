@@ -14,6 +14,7 @@ body {
     color: #111111;
     margin: auto;
     overflow-x: hidden;
+    position: relative;
 }
 
 a {
@@ -142,67 +143,6 @@ main {
     margin: -20px 0px 0px;
     color: #777777;
 }
-
-.modal-overlay {
-    background: rgb(0, 0, 0, 0.5);
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.modal-item {
-    background-color: #fff;
-    max-width: 660px;
-    max-height: 413px;
-    width: 60%;
-    height: 60%;
-    margin: 20vh auto;
-    border-radius: 16px;
-    padding: 30px;
-    text-align: center;
-}
-
-.modal-item img {
-    max-width: 600px;
-    max-height: 200px;
-    border-radius: 15px;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-item h2 {
-    font-size: 24px;
-    color: #111111;
-    margin-top: 20px;
-}
-  
-.modal-recipe-chef {
-    font-size: 18px;
-    color: #777777;
-    margin-top: 5px;
-}
-  
-.modal-close {
-    margin-top: 50px;
-    font-size: 16px;
-    color: #999999;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.modal-overlay.active .modal-close{
-    visibility: visible;
-    opacity: 1;
-}
-  
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-} 
   
 footer {
     width: 100%;
@@ -213,6 +153,8 @@ footer {
     align-items: center;
     font-size: 14px;
     color: #9999;
+    position: fixed;
+    bottom: 0;
 }
 
 /** === ABOUT === **/
@@ -234,4 +176,51 @@ footer {
     color: #444444;
     line-height: 28px;
     text-align: justify;
+}
+
+.recipe-details img {
+    max-width: 940;
+    width: 100%;
+    max-height: 280px;
+    border-radius: 15px;
+}
+  
+.recipe-details h1 {
+    margin-top: 50px;
+    text-align: center;
+}
+  
+.chef-name {
+    color: #777777;
+    font-size: 20px;
+    text-align: center;
+    margin: 4px 0 50px;
+}
+  
+.recipe-details h2 {
+    margin-bottom: 20px;
+}
+  
+.recipe-details ul {
+    list-style-position: inside;
+    margin-bottom: 40px;
+    text-align: left;
+}
+  
+.recipe-details span, p {
+    line-height: 28px;
+    color: #444444;
+    text-align: justify;
+}
+  
+.list-title {
+    display: flex;
+    align-items: baseline;
+}
+  
+.list-title span {
+    font-size: 12px;
+    color: #999999;
+    font-weight: bold;
+    margin-left: 8px;
 }
