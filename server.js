@@ -27,9 +27,9 @@ server.get('/recipes', (req, res) => {
 });
 
 server.get('/recipes/:index', (req, res) => {
-    const index = req.params.index
-    const recipe = recipes[index]
-    return res.render('details', {recipe})
+    const index = req.params.index;
+    const recipe = recipes[index];
+    return res.render('details', {recipe});
 });
 
 server.listen(5001);

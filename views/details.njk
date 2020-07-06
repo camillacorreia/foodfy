@@ -5,40 +5,53 @@
     <main>
 
         <div class="main-content recipe-details">
-            <img src="{{recipe.image}}" alt="{{recipe.title}}">
+            
+            <div class="recipe">
+                <div class="recipe-img">
+                    <img src="{{recipe.image}}" alt="{{recipe.title}}">
+                </div>
 
-            <h1>{{recipe.title}}</h1>
-            <h3 class="chef-name">por {{recipe.author}}</h3>
+                <div class='card-name-author'>
+                    <p class="card-name">{{recipe.title}}</p>
+                    <p class="card-autor">por {{recipe.author}}</p>
+                </div>
 
-            <div class="list-title">
-            <h2>Ingredientes</h2>
-            <span>MOSTRAR</span>
+                <div>
+                    <div class="card-header">
+                        <h2>Ingredientes</h2>
+                        <p id='btn-ingredient'>Mostrar</p>
+                    </div>
+
+                    <ul class='card-ingredient'>
+                        {% for ingredient in recipe.ingredients %}
+                            <li>{{ingredient}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="card-header">
+                        <h2>Modo de preparo</h2>
+                        <p id='btn-preparation'>Mostrar</p>
+                    </div>
+
+                    <ul class='card-preparation'>
+                        {% for prep in recipe.preparation %}
+                            <li>{{prep}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="card-header">
+                        <h2>Informações Adicionais</h2>
+                        <p id='btn-info'>Mostrar</p>
+                    </div>
+
+                    <p class="text-info">{{recipe.information}}</p>
+                </div>
             </div>
-            <ul>
-            {%for ingredient in recipe.ingredients%}
-                <li>
-                <span>{{ingredient}}</span>
-                </li>
-            {%endfor%}
-            </ul>
 
-            <div class="list-title">
-            <h2>Modo de preparo</h2>
-            <span>MOSTRAR</span>
-            </div>
-            <ul>
-            {%for steps in recipe.preparation%}
-                <li>
-                <span>{{steps}}</span>
-                </li>
-            {%endfor%}
-            </ul>
-
-            <div class="list-title">
-            <h2>Informações adicionais</h2>
-            <span>MOSTRAR</span>
-            </div>
-            <p>{{recipe.information}}</p>
         </div>
 
     </main>
