@@ -75,8 +75,6 @@ footer {
     align-items: center;
     font-size: 14px;
     color: #9999;
-    position: fixed;
-    bottom: 0;
 }
 
   
@@ -247,4 +245,202 @@ footer {
 .recipe .card-ingredient.show-info-active,
 .recipe .text-info.show-info-active {
     display: block;
+}
+
+/*-- ADMIN --*/
+.header-content.admin {
+    background: #111;
+    margin: 0px;
+    max-width: 2000px;
+}
+
+.header-content.admin a img {
+    margin-left: 200px;
+}
+
+.admin-top {
+    display:block;
+    align-items: center;
+}
+  
+.admin-top h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 25px 0px 16px 0px;
+}
+  
+.admin-top a {
+    background-color: #6558c3;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    width: 136px;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer;
+}
+
+.admin-top a:hover {
+    opacity: 0.8;
+}
+
+.admin-list {
+    margin-top: 36px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.admin-list .admin-img a img{
+    width: 190px;
+    height: 80px;
+    border-radius: 8.57px;
+    margin-right: 20px;
+}
+
+.admin-list .admin-details .title {
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 0;
+}
+
+.admin-list .admin-details .chef {
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 0;
+} 
+
+.admin-list .admin-details a {
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    color: #6558c3;
+}
+
+.admin-list .admin-details a:hover {
+    opacity: 0.8;
+}
+
+.admin-form-title{
+    display:flex;
+    justify-content: space-between;
+    justify-items: center;
+    margin-top: 36px;
+}
+
+.admin-form-title h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+  
+.admin-form-title button.save,
+.admin-form-title a.button {
+    background-color: #6558c3;
+    border: 1px solid #6558c3;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    width: 136px;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.admin-form-title button:hover.save,
+.admin-form-title a:hover.button {
+    opacity: 0.8;
+}
+
+.admin-form {
+    margin-bottom: 64px;
+}
+
+.admin-form h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #111111;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.admin-form input,
+.admin-form textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(167, 159, 159, 0.404);
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.admin-form a.add-ingredient,
+.admin-form a.add-step {
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    color: #6558c3;
+    text-align: right;
+}
+
+#form-delete button.delete {
+    background-color: #dc4747;
+    border: 1px solid #dc4747;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    width: 92px;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    right: 480px;
+    top: 130px;
+}
+
+#form-delete button:hover.delete {
+    opacity: 0.8;
+}
+
+.admin-details {
+    justify-items: center;
+    align-items: center;
+}
+
+.admin-details img {
+    width: 100%;
+    border-radius: 15px;
+    margin: 24px auto;
+}
+
+.admin-details .title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #111111;
+    text-align: center;
+    margin-top: 36px;
+}
+
+.admin-details .chef {
+    font-size: 20px;
+    color: #777777;
+    text-align: center;
+    margin-top: -24px;
+}
+
+.admin-details h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111111;
+}
+
+.admin-details ul li {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    list-style-type: none;
+    list-style: inside;
 }
